@@ -24,11 +24,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        path: ${GOPATH}/github.com/apache/cloudberry-gpbackup
+        path: /home/runner/go/github.com/apache/cloudberry-gpbackup
 
     - name: Dependencies
       run: |
-        cd ${GOPATH}/github.com/apache/cloudberry-gpbackup
+        cd /home/runer/go/github.com/apache/cloudberry-gpbackup
         make depend
 
     - name: Build
