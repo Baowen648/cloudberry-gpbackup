@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.21.4
+    - name : 查看go信息
       run: |
         echo "查看go信息"
         go env GOPATH
