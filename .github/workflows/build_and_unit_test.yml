@@ -20,15 +20,18 @@ jobs:
     - name : 查看go信息
       run: |
         echo "查看go信息"
-        go env GOPATH
+        echo $GOPATH
+    - name: Set GOPATH
+      run: |
+        echo "GOPATH=$GITHUB_WORKSPACE/go" >> $GITHUB_ENV
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        path: /home/runner/go/github.com/apache/cloudberry-gpbackup
-
+        path: go/github.com/apache/cloudberry-gpbackup
+    -name :查看我安装的目录的位置
     - name: Dependencies
       run: |
-        cd /home/runer/go/github.com/apache/cloudberry-gpbackup
+        cd $GITHUB_WORKSPACE/go/github.com/apache/cloudberry-gpbackup
         make depend
 
     - name: Build
