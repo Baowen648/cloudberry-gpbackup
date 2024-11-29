@@ -28,7 +28,6 @@ jobs:
       with:
         fetch-depth: 0
         path: go/github.com/apache/cloudberry-gpbackup
-    -name :查看我安装的目录的位置
     - name: Dependencies
       run: |
         cd $GITHUB_WORKSPACE/go/github.com/apache/cloudberry-gpbackup
