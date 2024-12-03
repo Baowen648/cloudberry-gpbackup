@@ -25,11 +25,17 @@ jobs:
     - name: Set Environment
       run: |
         echo "GOPATH=$GITHUB_WORKSPACE/go" >> $GITHUB_ENV 
-        export GOBIN=$GOPATH/bin
-        export PATH=$PATH:$GOBIN
+        echo 'export GOBIN=$GOPATH/bin' >> ~/.bashrc 
+        echo 'export PATH=$PATH:$GOBIN' >> ~/.bashrc
+        source ~/.bashrc
     - name: Dependencies
       run: |
+        go env GOPATH
+        echo "######################1"
+        go env GOBIN
+        echo "######################2"
         go env 
+        echo "######################3" 
         cd ${GOPATH}/pkg/mod/github.com/apache/cloudberry-gpbackup
         make depend
 
