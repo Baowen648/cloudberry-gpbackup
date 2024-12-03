@@ -25,7 +25,6 @@ jobs:
     - name: Set Environment
       run: |
         echo "GOPATH=$GITHUB_WORKSPACE/go" >> $GITHUB_ENV 
-        echo "$GOPATH/bin" >> $GITHUB_PATH
     - name: Dependencies
       run: |
         go env 
