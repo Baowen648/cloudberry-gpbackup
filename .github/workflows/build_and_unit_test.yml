@@ -28,9 +28,7 @@ jobs:
         echo "GOBIN=$GOPATH/bin" >> $GITHUB_PATH
     - name: Dependencies
       run: |
-        go env GOPATH
-        go env GOBIN
-        echo $GOBIN
+        go env 
         cd ${GOPATH}/pkg/mod/github.com/apache/cloudberry-gpbackup
         make depend
 
