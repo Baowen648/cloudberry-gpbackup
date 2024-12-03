@@ -24,9 +24,9 @@ jobs:
 
     - name: Set Environment
       run: |
-        echo "GOPATH=$GITHUB_WORKSPACE/go >> $GITHUB_ENV" >> $GITHUB_ENV
+        echo "GOPATH=$GITHUB_WORKSPACE/go >> $GITHUB_ENV" 
         echo "GOPATH/bin" >> $GITHUB_PATH
-        echo "GOPATH地址是:$GOPATH"
+        echo $GOPATH
     - name: Dependencies
       run: |
         cd ${GOPATH}/pkg/mod/github.com/apache/cloudberry-gpbackup
