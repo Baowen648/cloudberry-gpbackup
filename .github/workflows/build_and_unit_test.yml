@@ -26,8 +26,6 @@ jobs:
       run: |
         echo "GOPATH=$GITHUB_WORKSPACE/go" >> $GITHUB_ENV 
         echo "$GOPATH/bin" >> $GITHUB_PATH
-        export PATH=$PATH:$GOPATH/bin
-        source ~/.bashrc 
     - name: Dependencies
       run: |
         go env 
